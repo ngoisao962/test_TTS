@@ -1,0 +1,872 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+a{
+    text-decoration: none !important;
+}
+ul{
+    margin-bottom: 0 !important;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  overflow-x: hidden;
+}
+/*  */
+
+
+/*  */
+.md-about:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #fff;
+  left: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+.about-us .caption .ct {
+  background: inherit;
+  position: relative;
+  z-index: 1;
+  padding: 20px 0 25px 0;
+}
+.h-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 50px 20px 0 20px;
+    z-index: 9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.h-header .main-nav.active>ul {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: 100% 0%;
+    transition: all 0.8s;
+}
+.h-header .main-nav>ul>li {
+    display: inline-block;
+    transition: .4s;
+}
+.h-header .main-nav {
+    text-align: center;
+    margin-left: 30px;
+}
+.h-header .logo {
+    position: absolute;
+    left: 50px;
+    top: 45px;
+    transition: 0.2s;
+}
+.h-header .main-nav>ul>li>a {
+    text-transform: uppercase;
+    color: #ffffff;
+    /* margin: 0 25px; */
+    margin: 0 18px;
+    font-size: 14px;
+}
+@media (min-width: 992px)
+{
+    .home-header .logo {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s ease-in-out;
+        transition-delay: 0.1s;
+    }
+}
+.h-header.fixed {
+    background: rgba(6,30,25,0.95);
+    box-shadow: 0 0 6px 0 rgba(170,142,96,0.5);
+}
+@media (min-width: 992px)
+{
+    .h-header.fixed {
+        height: 70px;
+        padding-top: 25px;
+    }
+    .home-header .logo {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s ease-in-out;
+        transition-delay: 0.1s;
+    }
+}
+
+.md-slider {
+    position: relative;
+}
+
+/* silder */
+.wrapper {
+    width: 100%;
+    
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider-container .item {
+    outline: none;
+    /* padding: 50px 0; */
+    position: relative;
+  }
+  
+
+  .slides-numbers .active {
+    color: #ffffff;
+    font-size: 30px;
+    margin-right: -6px;
+  }
+  .slides-numbers .total {
+    margin-left: -5px;
+  }
+  .slick-arrow {
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: none;
+    background: #6caddf;
+    position: absolute;
+    top: -9px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 5;
+    color: #fff;
+    text-transform: lowercase;
+    cursor: pointer;
+  }
+  
+  .slick-arrow .slick-next {
+    right: 0;
+  }
+  .slick-arrow .slick-prev {
+    right: 55px;
+  }
+
+  .slick-next,.slick-prev{
+    display: none !important;
+  }
+  .media-wrap img{
+    width: 100%;
+  }
+  .slider-nav {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 0;
+    padding-bottom: 250px;
+    z-index: 1;
+}
+.none{
+  display: none;
+}
+@media (min-width: 1200px)
+{
+    .slider-nav {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+.slider-nav .slide-logo {
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    margin-left: -46px;
+    padding-bottom: 160px;
+    z-index: 1;
+    width: 200px;
+    margin-left: -75px;
+}
+@media (min-width: 1200px)
+{
+    .slider-nav .slide-logo {
+        top: 90px;
+        bottom: auto;
+    }
+}
+.slider-nav .slide-logo:after {
+    content: '';
+    width: 1px;
+    background: #fff;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    top: 105px;
+}
+.slides-numbers {
+    color: #ffffff;
+    display: none;
+    font-size: 20px;
+    font-weight: 300;
+    left: 50px;
+    position: absolute;
+    z-index: 8;
+    /* top: 80px; */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slick-dots{
+    list-style: none;
+}
+.slick-dots li{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+.slick-dots{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 0;
+}
+/* .slider-nav .mouse span {
+   
+    display: block;
+    height: 52px;
+    width: 32px;
+    border-radius: 35px;
+    border: solid 2px #fff;
+    position: relative;
+}
+.slider-nav:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    height: 200px;
+    width: 1px;
+    background: #fff;
+}
+.slider-nav .mouse span:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+    margin: 8px auto;
+    animation: mouse 1s infinite;
+} */
+/* .md-about:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #fff;
+    left: 50%;
+    z-index: 1;
+    pointer-events: none;
+} */
+.md-about {
+    background-color: #10302a;
+    background-image: url('http://ceogroup.com.vn/public/images/bg-about.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
+    padding-bottom: 130px;
+}
+.about-us {
+    max-width: 913px;
+    margin: auto;
+    position: relative;
+}
+.about-us .c-img .outline {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: 15px;
+    border-radius: 50%;
+    border: solid 1px #aa8e60;
+    pointer-events: none;
+}
+.prl-5 {
+    transition: all 1.4s cubic-bezier(0.12, 0.54, 0.76, 0.79);
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.about-us .caption {
+    position: absolute;
+    top: 16.65%;
+    right: 16.65%;
+    bottom: 16.65%;
+    left: 16.65%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0 11%;
+    color: #fff;
+    background: #12352e;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.md-title:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    background: #fff;
+    bottom: 100%;
+    margin-bottom: 8px;
+    height: 85px;
+}
+.md-title {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 34px;
+    position: relative;
+}
+.md-title:after {
+    content: '';
+    display: block;
+    margin: 7px auto 0 auto;
+    height: 2px;
+    width: 175px;
+    max-width: 100%;
+   
+    background: linear-gradient(to right, rgba(170,142,96,0.1),#aa8e60,rgba(170,142,96,0.1));
+}
+.more {
+    font-size: 15px;
+    font-style: italic;
+    color: #fff;
+}
+.md-business {
+    /* background: #102f28; */
+    background: #092620;
+    background-image: url('http://ceogroup.com.vn/public/images/bg-business2.png');
+    background-repeat: no-repeat;
+    background-position: center top 100%;
+    /* background-size: auto 80%; */
+    position: relative;
+    z-index: 1;
+    padding-top: 65px;
+    background-clip: content-box;
+}
+.md-business:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background-color: #102f28;
+    top: 0;
+    height: 120px;
+}
+.md-title:after {
+    content: '';
+    display: block;
+    margin: 7px auto 0 auto;
+    height: 2px;
+    width: 175px;
+    max-width: 100%;
+    
+    background: linear-gradient(to right, rgba(170,142,96,0.1),#aa8e60,rgba(170,142,96,0.1));
+}
+.project-head {
+    background: #092620;
+    padding-top: 68px;
+    padding-bottom: 65px;
+}
+.md-project {
+    background-image: url("http://ceogroup.com.vn/public/images/bg-project.jpg");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #061e19;
+    padding-top: 85px;
+    padding-bottom: 8px;
+}
+.prj-view img {
+    display: block;
+    width: 100%;
+}
+.prj-view .outline {
+    position: absolute;
+    border: solid 1px #aa8e60;
+    top: -25px;
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+}
+.prj-view {
+    position: relative;
+}
+.fx-bot {
+    align-items: flex-end;
+}
+
+h3.title {
+    position: relative;
+    padding-left: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    max-width: 375px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.item p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    color: white;
+}
+.owl-drag{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    gap: 10px;
+}
+.active_fade{
+    color: #fff;
+    margin-bottom: 100px;
+}
+.md-partner {
+    background-color: #061e19;
+    background-image: url("http://ceogroup.com.vn/public/images/bg-partner.png");
+    background-position: left 4% top 25%;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+    padding-top: 93px;
+}
+.partner_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #afafaf;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    transition: all .4s ease-in-out;
+}
+.partner_image:hover{
+    transform: scale(1.2);
+}
+li{
+    list-style: none;
+}
+ul{
+    padding-left: 0 !important;
+}
+.owl-item{
+    height: 200px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 200px !important;
+}
+.slick-track{
+    display: flex !important;
+    justify-content: center;
+}
+.footer {
+    background-image: url("http://ceogroup.com.vn/public/images/bg-foot.jpg");
+    color: #fff;
+    font-size: 17px;
+    padding: 55px 0;
+}
+.footer .f-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+.f-news {
+    background: #092620;
+    color: #fff;
+    padding: 10px 0;
+    border-top: solid 1px #aa8e60;
+    border-bottom: solid 1px #aa8e60;
+}
+@media (min-width: 992px)
+{
+    .f-news {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+        /* display: none; */
+    }
+}
+.f-news .ct {
+    position: relative;
+    padding-left: 80px;
+}
+.i-title {
+    margin-bottom: 0 !important;
+    margin-right: 20px;
+}
+/* .ct-item{
+    width: 323.333px !important;
+    margin-right: 10px !important;
+} */
+.tilte_p{
+    margin-top: 2px;
+    line-height: 18px;
+    max-height: 36px;
+    overflow: hidden;
+    color: #f1ede5;
+    font-size: 14px;
+}
+.ct-item .ct_title span{
+    font-size: 12px;
+}
+.ct_title{
+    display: flex;
+    align-items: flex-end;
+     gap: 0 10px;
+}
+.social{
+    display: flex;
+    gap: 0 5px;
+    margin-top: 10px;
+}
+.copyright{
+    font-size: 14px;
+    margin-top: 5px;
+}
+/* .item_kinhdoanh .fadeInUp{
+    width: 1170px !important;
+} */
+.item_kinhdoanh .fadeInUp img{
+    margin: auto;
+    text-align: center;
+}
+.item_kinhdoanh_content{
+    display: flex;
+    flex: 1 2 1;
+}
+.bd_h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item_center_p{
+    line-height: 25px;
+    color: white;
+    font-size: 14px ;
+}
+.chitite_p{
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.list_item{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* .business {
+    padding-top: 120px;
+    padding-bottom: 97px;
+  } */
+  .business{
+    background: #092620;
+    background-image: url("http://ceogroup.com.vn/public/images/bg-business2.png");
+    background-repeat: no-repeat;
+    background-position: center top 100%;
+    background-size: auto 80%;
+    position: relative;
+    z-index: 1;
+    padding-top: 65px;
+    background-clip: content-box;
+
+  }
+  .business__container{
+    padding-bottom: 20px;
+  }
+  .business__heading {
+    margin-bottom: 50px;
+  }
+  .business .slick-initialized .slick-slide {
+    margin: 0 10px;
+  }
+  .business .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 5;
+    transition: all 0.2s linear;
+    background-color: transparent;
+    color: #fff;
+  }
+  .business .bi-chevron-left::before,
+  .business .bi-chevron-right::before {
+    font-size: 70px;
+  }
+  .business .slick-list {
+    overflow: inherit;
+  }
+  .business .slick-prev {
+    left: -80px;
+  }
+  .business .slick-next {
+    right: -80px;
+  }
+  .business__image img {
+    width: 100%;
+    height: auto;
+  }
+  .business__image {
+    z-index: 1;
+    position: relative;
+  }
+  .business__image::after {
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 100%;
+    z-index: 999;
+    top: -19px;
+    border: 1px solid #aa8e60;
+    left: 19px;
+  }
+  .btn__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+  .business__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .business__text h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    padding: 54px 0;
+    width: 330px;
+    padding-left: 70px;
+    text-align: center;
+  }
+  .business__text p {
+    color: #fff;
+    font-size: 20px;
+    width: 729px;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 0;
+  }
+  .btn__shared {
+    color: #fff;
+    width: 205px;
+    height: 58px;
+    background-color: transparent;
+    border: 1px solid #aa8e60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+  .btn__shared::after {
+    position: absolute;
+    content: "";
+    width: 195px;
+    height: 70px;
+    border: 1px solid #aa8e60;
+    transition: all 0.5s ease-in-out;
+  }
+  .btn__shared:hover {
+    background-color: #aa8e60;
+    color: #fff;
+  }
+  .btn__shared:hover::after {
+    display: none;
+  }
+  .btn__shared.isActive {
+    background-color: #aa8e60;
+  }
+  .btn__shared.isActive::after {
+    display: none;
+  }
+  .about-details{
+    color: white !important;
+  }
+  .business::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    background: #092620;
+    height: 160px;
+    top: -40px;
+    z-index: -1;
+    left: -100px;
+    right: -100px;
+    border-radius: 100% 100% 0 0/ 200% 200% 0 0;
+  }
+  .business::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background-color: #102f28;
+    top: 0;
+    height: 120px;
+  }
+  .title_p{
+    background: inherit;
+    position: relative;
+    z-index: 1;
+    /* padding: 20px 0 25px 0; */
+  }
+  .business .md-title:before {
+    height: 166px;
+}
+.partner {
+  padding: 50px 0;
+}
+.partner__slider {
+  margin-top: 50px;
+}
+.partner__item {
+  width: 260px;
+  height: 200px !important;
+  align-items: center;
+  display: flex !important;
+  justify-content: center;
+}
+.part__item--wrapper {
+  border-radius: 50%;
+  background-color: #afafaf;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 450ms ease-in-out;
+}
+.part__item--wrapper:hover {
+  transform: scale(1.2);
+}
+.partner__item img {
+  transform: scale(0.8);
+  width: auto;
+  height: auto;
+}
+.partner .slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+.partner .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+  background-color: transparent;
+  color: #fff;
+}
+.partner .bi-chevron-left::before,
+.partner .bi-chevron-right::before {
+  font-size: 70px;
+}
+
+.partner .slick-prev {
+  left: 0;
+}
+.partner .slick-next {
+  right: 0;
+}
+.partner .slick-list {
+  padding: 20px 0;
+}
