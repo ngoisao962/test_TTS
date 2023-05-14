@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 *,
 *:before,
 *:after {
@@ -35,14 +36,18 @@ ul{
 }
 body {
   min-height: 100vh;
-  font-weight: 400;
-  font-size: 16px;
+  /* font-weight: 400; */
+  font-size: 14px;
   line-height: 1;
   overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
 }
 /*  */
 
-
+.fadeInUp p{
+  font-size: 14px;
+  line-height: 26px;
+}
 /*  */
 .md-about:before {
   content: '';
@@ -985,6 +990,144 @@ ul{
   width: 100%;
   
 }
+.project .slider-project {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.project .slider-project .slider-for {
+  /* width: calc(40% - 30px); */
+  width: 40%;
+}
+
+.project .slider-project .slider-for li {
+  height: 40rem;
+}
+
+.project .slider-project .slider-for li img {
+  height: 100%;
+}
+
+.project .slider-project .slider-for li .project-title {
+  color: #fff;
+  position: absolute;
+  top: 22%;
+  left: 10%;
+}
+
+.project .slider-project .slider-for li .project-title h3{
+  font-size: 1.6rem;
+    font-weight: 900;
+    padding-left: 1rem;
+}
+
+.project .slider-project .slider-for li .project-title p{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 24px;
+  -webkit-line-clamp: 3;
+  height: 75px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: .9rem;
+}
+
+.project .slider-project .slider-for li .project-title a{
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
+  transition: all .3s;
+}
+.project .slider-project .slider-for li .project-title a:hover{
+  color: #aa8e60;
+}
+
+.project .slider-project .slider-nav {
+  width: calc(60% - 10px);
+  height: 100%;
+  position: absolute;
+  /* right: -51px; */
+  bottom: -54%;
+  left: 66%;
+  /* transform: translateX(-168px); */
+}
+
+.project .slider-project .slider-nav .slick-list {
+  padding: 0 !important;
+  margin: 20px;
+}
+
+.project .slider-project .slider-nav li {
+  padding: 1rem;
+  padding-bottom: 10px;
+  position: relative;
+  height: 150px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.project .slider-project .slider-nav li h4 {
+  position: absolute;
+  bottom: 0;
+  padding-left: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.project .slider-project .slider-nav li:hover h4 {
+  opacity: 1;
+}
+
+.project .slider-project .slider-nav li img {
+  transition: all 0.3s;
+  border: 1px solid;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .slider-project .slider-nav li:hover img{
+  filter: brightness(0.5);
+  border: 1px solid #aa8e60;
+}
+
+.project .slider-project .slider-nav .slick-prev,
+.project .slider-project .slider-nav .slick-next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  z-index: 5;
+  transition: all 0.2s linear;
+  color: #fff;
+  top: 22%;
+}
+
+.project .slider-project .slider-nav .slick-prev {
+  left: 1%;
+}
+
+.project .slider-project .slider-nav .slick-next {
+  right: 1%;
+}
+
+.project .slider-project .slider-nav .slick-prev:hover,
+.project .slider-project .slider-nav .slick-next:hover {
+  color: #aa8e60;
+}
+
+.project .slider-project .slider-nav .slick-prev::before,
+.project .slider-project .slider-nav .slick-next::before {
+  display: none;
+}
 /* .business__image--slider .slick-dots li{
   color: #fff !important;
   width: 205px;
@@ -1072,3 +1215,26 @@ ul{
 .title_silders p{
   padding-right: 7%;
 }
+
+
+
+.project {
+  background-image: url("http://ceogroup.com.vn/public/images/bg-project.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #061e19;
+  padding: 8rem 0 1rem;
+  margin-top: -2rem;
+}
+
+.business h2 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 4rem 0 2rem;
+  position: relative;
+  z-index: 9;
+  font-weight: bold;
+}
+

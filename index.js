@@ -5,10 +5,10 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
   if (currentScroll > 50) {
     header.classList.add("fixed");
-    f_news.classList.remove("none");
+    // f_news.classList.remove("none");
   } else {
     header.classList.remove("fixed");
-    f_news.classList.add("none");
+    // f_news.classList.add("none");
     
   }
 });
