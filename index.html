@@ -149,12 +149,12 @@
       <div class="container">
         <div class="about-us">
           <div class="c-img wow fadeInDown">
-            <img src="http://ceogroup.com.vn/public/images/about.png" alt="" />
+            <img src="http://ceogroup.com.vn/public/images/about.png" class="about_us_image" alt="" />
             <span
               class="outline prl prl-5 prl-left wow fadeInDown"
               data-wow-delay="0.3s"
               style="
-                transform: translateX(-0.204464px);
+               transform: translateX(25px);
                 visibility: visible;
                 animation-delay: 0.3s;
                 animation-name: fadeInDown;
@@ -259,7 +259,7 @@
         </div>
       </div>
     </section>
-    <div class="project-head">
+    <div class="project-head pb-5">
       <h2
         class="md-title wow fadeInUp"
         style="visibility: visible; animation-name: fadeInUp"
@@ -598,6 +598,23 @@
           </div>
         </div>
       </div>
+    </section>
+      <div class="word-prl">
+        <div class="word-1  wow fadeIn" >
+            <img src="http://ceogroup.com.vn/public/images/word1.png" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn; opacity: 0.815775;" alt="" title="" />
+        </div>
+        <div class="word-2 prl-w6 wow fadeIn"  style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn; opacity: 0.815775;">
+            <img src="http://ceogroup.com.vn/public/images/word2.png" alt="" title="" />
+        </div>
+        <div class="word-3 prl-w0 prl-wl wow fadeIn" >
+            <img src="http://ceogroup.com.vn/public/images/word3.png" alt="" title="" />
+        </div>
+       
+        <div class="word-5 prl-w2 wow fadeIn" >
+            <img src="http://ceogroup.com.vn/public/images/word4.png" alt="" title="" />
+        </div>
+      
+    </div>
       <footer>
         <div class="footer bg">
           <div class="container">
@@ -687,7 +704,7 @@
           </div>
         </div>
       </footer>
-    </section>
+    
     <script src="index.js"></script>
     <script
       type="text/javascript"
@@ -711,6 +728,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script>
         $(".slider-project .slider-for").slick({
   slidesToShow: 1,
@@ -991,6 +1011,66 @@ $(".slider-project .slider-nav").slick({
 
 
 
+    </script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".business__image--slider", {
+    scrollTrigger: {
+      trigger: ".business__image--slider",
+      // start: "top center",
+      // end: "bottom center",
+      scrub: true,
+      duration: 8
+    },
+    y:80
+  });
+  gsap.to(".about_us_image", {
+    scrollTrigger: {
+      trigger: ".about_us_image",
+      // start: "top center",
+      // end: "bottom center",
+      scrub: true,
+      duration: 8
+    },
+    x:80
+  });
+  gsap.to(".word-2", {
+    scrollTrigger: {
+      trigger: ".word-2",
+      
+      scrub: true
+      
+    },
+    y:500
+  });
+  gsap.to(".word-1", {
+    scrollTrigger: {
+      trigger: ".word-1",
+      
+      scrub: true
+      
+    },
+    y:400
+  });
+  gsap.to(".word-3", {
+    scrollTrigger: {
+      trigger: ".word-3",
+      
+      scrub: true
+      
+    },
+    y:400,
+    x:-400
+  });
+  gsap.to(".word-5", {
+    scrollTrigger: {
+      trigger: ".word-5",
+      
+      scrub: true
+      
+    },
+    y:450
+  });
     </script>
   </body>
 </html>

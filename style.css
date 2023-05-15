@@ -36,9 +36,10 @@ ul{
 }
 body {
   min-height: 100vh;
-  /* font-weight: 400; */
   font-size: 14px;
-  line-height: 1;
+  font-family: "OpenSans",sans-serif;
+  line-height: 1.5;
+  color: #2e2e2e;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
 }
@@ -433,7 +434,7 @@ body {
 .project-head {
     background: #092620;
     padding-top: 68px;
-    padding-bottom: 65px;
+    /* padding-bottom: 65px; */
 }
 .md-project {
     background-image: url("http://ceogroup.com.vn/public/images/bg-project.jpg");
@@ -510,6 +511,14 @@ h3.title {
     text-align: center;
     margin: auto;
     transition: all .4s ease-in-out;
+}
+.about_us_image{
+  border-radius: 50%;
+    background: #12352e;
+    transition: all 1.3s cubic-bezier(0.12, 0.54, 0.76, 0.79);
+}
+.business__image--slider{
+  transition: all 1.1s cubic-bezier(0.12, 0.54, 0.76, 0.79);
 }
 .partner_image:hover{
     transform: scale(1.2);
@@ -1180,7 +1189,7 @@ ul{
   margin: 8px auto;
   animation: mouse 1s infinite;
 }
-.slider-nav:after {
+.md-slider .slider-nav:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -1237,4 +1246,34 @@ ul{
   z-index: 9;
   font-weight: bold;
 }
-
+.word-prl>div {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  padding-top: 200px;
+  transition: all 1.2s cubic-bezier(0.12, 0.54, 0.76, 0.79);
+}
+.word-prl .word-2 {
+  left: 25%;
+    top: 136%;
+    max-width: 17%;
+ 
+}
+.word-prl .word-1 {
+  left: 0%;
+  top: 95%;
+  max-width: 9%;
+ 
+}
+.word-prl .word-3 {
+  right: 0%;
+  top: 150%;
+  max-width: 15%;
+ 
+}
+.word-prl .word-5 {
+  left: 0%;
+  top: 250%;
+  max-width: 8%;
+ 
+}
